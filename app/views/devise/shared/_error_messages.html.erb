@@ -1,0 +1,11 @@
+<% if resource.errors.any? %>
+  <div id="error_explanation">
+      <% resource.errors.full_messages.each do |message| %>
+        <div class="flex flex-col mt-2">
+          <div class="bg-red-200 border border-red-400 text-red-700 px-1 py-1 rounded relative" role="alert">
+            <span class="block sm:inline"><%= message %></span>
+          </div>
+        </div>
+      <% end %>
+  </div>
+<% end %>
